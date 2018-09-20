@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=MazeWalker
+comment1.params=
+comment1.target=void\ run()
+comment2.params=
+comment2.target=void\ signalSuccess()
+comment3.params=
+comment3.target=void\ signalError()
+comment4.params=
+comment4.target=MazeWalker()
+comment5.params=maze\ mazeBot
+comment5.target=void\ walkMaze(Maze,\ MazeBot)
+numComments=6
