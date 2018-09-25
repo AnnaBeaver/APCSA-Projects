@@ -1,10 +1,9 @@
 #BlueJ class context
 comment0.target=BallRunner
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ BallRunner\ here.\r\n\r\n\ Anna\r\n\ Ball\ World\r\n
-comment1.params=ballBotArray
-comment1.target=int\ findFreeBallBotIndex(BallBot[])
+comment1.params=
+comment1.target=void\ activityOne()
 comment2.params=
-comment2.target=void\ activityOne()
-comment3.params=
-comment3.target=void\ activityTwo()
-numComments=4
+comment2.target=void\ activityTwo()
+comment2.text=\r\n\ \ \ \ \ \ \ \ boolean\ runLoop\ \=\ true;\r\n\ \ \ \ \ \ \ \ int\ i\ \=\ 0;\r\n\ \ \ \ \ \ \ \ int\ returnValue\ \=\ -3;\r\n\ \ \ \ \ \ \ \ while(runLoop\ \=\=\ true){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if\ (ballBotArray[i]\ \=\=\ null){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ runLoop\ \=\ false;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returnValue\ \=\ i;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(i\ \=\=\ ballBotArray.length-1){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ runLoop\ \=\ false;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n
+numComments=3
