@@ -48,7 +48,6 @@ public class BallRunner
             }
             for(int a = 0; a < ballBotArray.length; a++){
                 if(ballBotArray[a] != null){
-
                     if (ballBotArray[a].canMoveForward(ballWorld)){
                         ballBotArray[a].moveForward();
                     }else{
@@ -57,7 +56,55 @@ public class BallRunner
                 }
             }
         }
-    }}
+    }
+
+    public double distanceBetweenPoints(TGPoint point1,TGPoint point2){
+        double ReturnValue = 0.0;
+        ReturnValue = Math.sqrt(Math.pow(point1.x-point2.x,2) + (Math.pow(point1.y-point2.y,2)));
+        return ReturnValue;
+    }
+
+    
+    public boolean enteranceClear(BallBot[] ballBotArray, TGPoint enterancePoint){
+        BallRunner ballRunner = new BallRunner();
+        boolean Return = false;
+        for(int i = 0; i < ballBotArray.length; i++){
+            if (ballBotArray[i] == null){
+                Return = false;
+            }
+            if(Return == true){
+                if (ballRunner.distanceBetweenPoints(ballBotArray[i].getPoint(),enterancePoint ) > 100){
+                   Return = false;
+                }
+            }
+        }
+        return Return;
+    }
+
+    public static void activityThree(){
+        BallWorld ballWorld = new BallWorld(500,500);
+        TGPoint entrancePoint = new TGPoint(0,0); 
+        BallBot[] ballBotArray = new BallBot[3];
+        BallRunner ballRunner = new BallRunner();
+        while (ballRunner.enteranceClear(ballBotArray,entrancePoint) == true){
+            int n = ballRunner.findFreeBallBotIndex(ballBotArray);
+            if (n < ballBotArray.length){
+                //if there is room in BallBot Array for an addition to BallBot
+                ballBotArray[n] = new BallBot(ballWorld,entrancePoint,(Math.random()*360),25);
+            }
+            for(int a = 0; a < ballBotArray.length; a++){
+                if(ballBotArray[a] != null){
+                    if (ballBotArray[a].canMoveForward(ballWorld)){
+                        ballBotArray[a].moveForward();
+                    }else{
+                        ballBotArray[a].setHeading(ballBotArray[a].getHeading() + 35);
+                    }
+                }
+            }
+        }
+        
+    }
+}
 
 /**
  * if (GenerateBalls){
