@@ -24,11 +24,11 @@ public class BallRunner
         }
     }
 
+    //finds empty spot in the array to make a ballBot
     public static int findFreeBallBotIndex(BallBot[] ballBotArray){
         int returnValue = 0;
         for(int i = 0; i < ballBotArray.length; i++){
             if (ballBotArray[i] == null){
-
                 returnValue = i;
             }
         }
@@ -39,6 +39,7 @@ public class BallRunner
     }
 
     public static void activityTwo(){
+        //Instance Variables
         BallWorld ballWorld = new BallWorld(500,500);
         TGPoint entrancePoint = new TGPoint(0,0); 
         BallBot[] ballBotArray = new BallBot[10];
@@ -49,10 +50,13 @@ public class BallRunner
                 //if there is room in BallBot Array for an addition to BallBot
                 ballBotArray[n] = new BallBot(ballWorld,entrancePoint,(Math.random()*360),25);
             }
+            
             for(int a = 0; a < ballBotArray.length; a++){
                 if(ballBotArray[a] != null){
+                    //if it can move forward, do so
                     if (ballBotArray[a].canMoveForward(ballWorld)){
                         ballBotArray[a].moveForward();
+                    //if it can't, turn 35 degrees clockwise until it can
                     }else{
                         ballBotArray[a].setHeading(ballBotArray[a].getHeading() + 35);
                     }
@@ -121,6 +125,7 @@ public class BallRunner
         BallRunner ballRunner = new BallRunner();
         TGPoint firstPoint = ballBot.getPoint();
         TGPoint nextPoint = ballBot.forwardPoint();
+        //traverse array
         for(int i = 0; i < ballBotArray.length; i++){
             BallBot otherBallBot = ballBotArray[i];
             if(otherBallBot!= null){
