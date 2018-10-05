@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BallRunner
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BallRunner\ here.\r\n\r\n\ Anna\r\n\ Ball\ World\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ BallRunner\ here.\n\n\ Anna\n\ Ball\ World\n
 comment1.params=
 comment1.target=void\ activityOne()
 comment2.params=ballBotArray
@@ -13,7 +13,8 @@ comment5.params=ballBotArray\ enterancePoint
 comment5.target=boolean\ enteranceClear(BallBot[],\ TGPoint)
 comment6.params=
 comment6.target=void\ activityThree()
-comment7.params=
-comment7.target=void\ activityFour()
-comment7.text=\r\n\ \ \ \ \ \ \ //find\ the\ distance\ between\ the\ ball\ about\ to\ be\ created\ and\ the\ ball\ made\ before\ that\r\n\ \ \ \ public\ double\ distanceBetweenPoints(TGPoint\ point1,TGPoint\ point2){\r\n\ \ \ \ \ \ \ \ double\ ReturnValue\ \=\ 0.0;\r\n\ \ \ \ \ \ \ \ ReturnValue\ \=\ Math.sqrt(Math.pow(point1.x-point2.x,2)\ +\ (Math.pow(point1.y-point2.y,2)));\r\n\ \ \ \ \ \ \ \ return\ ReturnValue;\r\n\ \ \ \ }\r\n\r\n\ \ \ \ //Make\ sure\ that\ the\ ball\ is\ far\ enough\ away\ to\ make\ a\ new\ one\r\n\ \ \ \ public\ boolean\ enteranceClear(BallBot[]\ ballBotArray,\ TGPoint\ enterancePoint){\r\n\ \ \ \ \ \ \ \ BallRunner\ ballRunner\ \=\ new\ BallRunner();\r\n\ \ \ \ \ \ \ \ //boolean\ Return\ \=\ true;\r\n\ \ \ \ \ \ \ \ //traverse\ the\ array\r\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ ballBotArray.length;\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ //test\ if\ the\ spot's\ null\r\n\ \ \ \ \ \ \ \ \ \ \ \ if\ (ballBotArray[i]\ \!\=\ null){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //Return\ \=\ false;\r\n\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //if\ the\ spot\ is\ null,\ check\ to\ seee\ if\ the\ other\ ball\ is\ far\ enough\ away\ to\ make\ a\ new\ one\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //if(Return\ \=\=\ true){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (ballRunner.distanceBetweenPoints(ballBotArray[i].getPoint(),enterancePoint\ )\ <\ 100){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ false;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ //returns\ the\ boolean\ (true\ if\ the\ ball\ is\ far\ enough\ away,\ false\ if\ the\ ball\ is\ too\ close)\r\n\ \ \ \ \ \ \ \ return\ true;\r\n}
-numComments=8
+comment7.params=ballBot\ ballBotArray
+comment7.target=BallBot\ ballBotToBounceOff(BallBot,\ BallBot[])
+comment8.params=
+comment8.target=void\ activityFour()
+numComments=9
