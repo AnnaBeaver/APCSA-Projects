@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=MagpieRunner2
 comment0.text=\r\n\ Anna\ Beaver\r\n
@@ -5,3 +6,12 @@ comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment1.text=\r\n\ Create\ a\ Magpie,\ give\ it\ user\ input,\ and\ print\ its\ replies.\r\n
 numComments=2
+=======
+#BlueJ class context
+comment0.target=MagpieRunner2
+comment0.text=\r\n\ Anna\ Beaver\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Create\ a\ Magpie,\ give\ it\ user\ input,\ and\ print\ its\ replies.\r\n
+numComments=2
+>>>>>>> 75a76530cea06f81e6fe56e9dc77afb39db7d760
